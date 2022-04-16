@@ -8,8 +8,23 @@
  $categorias[] ='adulto';
  $categorias[] ='idoso';
 
+// VALIDAR INFORMAÇOES 
+if(empty($nome)){
+  echo 'O nome não pode estar vazio';
+  return;
+}
 
+if(strlen($nome) <3){
+  echo 'O nome deve conter mais de 3 caracteres';
+  return;
+}
 
+if(strlen($nome) > 40){
+  echo 'Nome  não aceito';
+  return;
+}
+
+//----------------------------------
  $nome = $_POST['nome'];
  $idade = $_POST['idade'];
 
